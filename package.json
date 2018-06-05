@@ -1,11 +1,14 @@
 {
-  "name": "server-side",
+  "name": "my-server-side-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "babel": "babel",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps --inline"
+    "test": "jest",
+    "babel-node": "babel-node",
+    "eslint": "eslint",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,8 +29,5 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1"
-  },
-  "dependencies": {
-    "npm": "^6.0.0"
   }
 }
